@@ -2,6 +2,7 @@ FROM heamon7/opencv:3.0.0-rc1
 MAINTAINER heamon7 <heamon7#g m a i l . c o m>
 
 # Install build-essential, git, wget and other dependencies
+RUN rm -rvf /var/lib/apt/lists/*
 RUN apt-get update && apt-get install -y \
   build-essential \
   git \
@@ -30,7 +31,8 @@ RUN echo "export PYTHONPATH=$MXNET_HOME/python:$PYTHONPATH" >> /root/.bashrc
 # Install pip
 # RUN easy_install -U pip
 # Install graphviz and jupyter
-RUN pip install graphviz jupyter
+RUN apt-get install -y python-dev python-pip libxml2-dev libxslt1-dev zlib1g-dev libffi-dev libssl-dev
+RUN pip install graphviz jupyter bpython
 
 # Set ~/mxnet as working directory
 WORKDIR /root/mxnet
