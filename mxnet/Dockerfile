@@ -32,7 +32,7 @@ RUN echo "export PYTHONPATH=$MXNET_HOME/python:$PYTHONPATH" >> /root/.bashrc
 # RUN easy_install -U pip
 # Install graphviz and jupyter
 RUN apt-get install -y python-dev python-pip libxml2-dev libxslt1-dev zlib1g-dev libffi-dev libssl-dev
-RUN pip install graphviz jupyter bpython
+RUN pip install graphviz jupyter bpython scipy scikit-learn --index-url=http://mirrors.aliyun.com/pypi/simple
 
 # Set ~/mxnet as working directory
 WORKDIR /root/mxnet
