@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/heamon7/ubuntu:ustc14:04
+FROM registry.cn-hangzhou.aliyuncs.com/heamon7/ubuntu:ustc14.04
 MAINTAINER heamon7 <heamon7#g m a i l . c o m>
 
 # Built using PyImageSearch guide: 
