@@ -1,0 +1,14 @@
+
+jupyter:
+  image: jupyter/scipy-notebook
+  container_name: jupyter
+  ports:
+    - 8889:8888
+  environment:
+    GRANT_SUDO: yes
+  user: root
+  volumes:
+    - $PWD/volumes/notebooks:/home/jovyan/work
+  entrypoint:
+    - start-notebook.sh
+    - --NotebookApp.password='sha1:d6281c9fcf98:5d0cbc9406ba46451aa75a1e323553bdb5fd3654'

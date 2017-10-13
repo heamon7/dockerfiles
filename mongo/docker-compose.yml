@@ -1,0 +1,17 @@
+mongo:
+  image: mongo
+  container_name: mongo
+  restart: unless-stopped
+  volumes:
+    - $PWD/volumes/data/mongo:/data/db
+
+
+# mongo:
+#   image: mongo
+#   container_name: mongo
+#   restart: unless-stopped
+#   command: '--auth'
+#   ports:
+#     - 28017:27017
+#   volumes:
+#     - $PWD/volumes/data/mongo:/data/db        

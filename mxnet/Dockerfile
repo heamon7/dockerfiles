@@ -1,5 +1,5 @@
 FROM heamon7/opencv:3.0.0-rc1
-MAINTAINER heamon7 <heamon7#g m a i l . c o m>
+MAINTAINER heamon7 <heamon7@gmail.com>
 
 # Install build-essential, git, wget and other dependencies
 RUN rm -rvf /var/lib/apt/lists/*

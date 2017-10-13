@@ -1,0 +1,10 @@
+nginx:
+  image: nginx
+  container_name: nginx
+  restart: unless-stopped
+  volumes:
+    - $PWD/volumes/nginx.conf:/etc/nginx/nginx.conf:ro
+    - $PWD/volumes/certs:/etc/nginx/certs:ro
+  ports:
+    - "80:80"
+    - "443:443"
