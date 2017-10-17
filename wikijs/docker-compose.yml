@@ -1,29 +1,9 @@
-wikidb:
-  image: mongo
-  container_name: wikidb
+wikijs:
+  image: r.cfcr.io/heamon7/wikijs
+  container_name: wikijs
   restart: unless-stopped
-  expose:
-    - "27017"
-  command: '--smallfiles --logpath=/dev/null'
-  volumes:
-    - $PWD/volumes/data/mongo:/data/db
-wiki:
-  image: heamon7/wiki
-  container_name: wiki
-  build: .
-  restart: unless-stopped
-  links:
-    - wikidb
-  # stdin_open: true
-  # tty: true
+  stdin_open: true
+  tty: true
   ports:
     - "3001:3000"
     - "81:80"
-
-
-
-
-
-
-
-  

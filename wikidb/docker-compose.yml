@@ -1,0 +1,7 @@
+wikidb:
+  image: r.cfcr.io/heamon7/wikidb
+  container_name: wikidb
+  restart: unless-stopped
+  expose:
+    - "27017"
+  command: '--smallfiles --logpath=/dev/null'

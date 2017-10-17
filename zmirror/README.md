@@ -1,6 +1,7 @@
 ## 使用指南
 - docker login xxx
 - docker-compose up -d
+- docker exec zmirror service apache2 restart
 
 ## 重置安装
 如果想重新使用 docker 安装 zmirror，可以使用下面的方法

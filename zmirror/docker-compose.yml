@@ -2,7 +2,6 @@ zmirror:
   container_name: zmirror
   image: r.cfcr.io/heamon7/zmirror
   restart: unless-stopped
-  command: "service apache2 restart"
   stdin_open: true
   tty: true
   ports:

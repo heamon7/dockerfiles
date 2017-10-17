@@ -1,3 +1,13 @@
+## 注意
+- wikijs 对机器的内存要求在 800M 以上
+
+## 使用指南
+- docker login xxx
+- docker-compose up -d
+- docker exec wikiji node wiki configure 
+- 浏览器访问 http://ip_addr:3001，检查配置信息，注意 MongoDB 的连接信息
+
+
 ## 使用指南：
 - 导出之前 wiki 的 MongoDB 数据
 - 使用 docker-compose.yml 启动 docker: `docker-compose up -d`
