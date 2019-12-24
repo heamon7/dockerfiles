@@ -20,3 +20,16 @@ zmirror:
     - "443:443"
 ```
 - docker exec -it zmirror bash 之后，按照[官方文档](https://github.com/aploium/zmirror-onekey)步骤安装
+
+cp /etc/apt/sources.list /etc/apt/sources.list.bakcup && echo """
+deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse 
+""">/etc/apt/sources.list && apt update
